@@ -10,6 +10,12 @@
 
 - 欢迎尝试、反馈[零基础编程入门](https://github.com/bjut-swift/CodeJourney)
 
-- 欢迎使用校内社区：[校园喵](xiaoyuancat.com)
+- 欢迎使用校内社区：[校园喵](https://xiaoyuancat.com/)
 
-我们的联系方式：发起[Issue](https://github.com/bjut-swift/.github/issues)
+- 我们需要每一份力量，欢迎联系以加入组织、申请立项、反馈意见。
+
+
+我们的联系方式：
+
+- 在[工大喵](https://xiaoyuancat.com/)上添加官方的微信。
+- 发起[Issue](https://github.com/bjut-swift/.github/issues)
