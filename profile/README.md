@@ -12,6 +12,7 @@
 
 - 欢迎使用校内社区：[校园喵](https://xiaoyuancat.com/)
 
+- 美观的学校风PPT模板，欢迎使用：[模板仓库](https://github.com/bjut-swift/BJUT-PPT-template)
 - 我们需要每一份力量，欢迎联系以加入组织、申请立项、反馈意见。
 
 
