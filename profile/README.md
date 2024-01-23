@@ -14,7 +14,7 @@
 
 - 美观的学校风PPT模板，欢迎使用：[模板仓库](https://github.com/bjut-swift/BJUT-PPT-template)
 
-- 硕士论文LaTeX模板，[欢迎使用！](https://github.com/bjut-swift/BJUTLATEX)
+- 硕士论文 $\LaTeX$ 模板，[欢迎使用！](https://github.com/bjut-swift/BJUTLATEX)
 
 - 我们需要每一份力量，欢迎联系以加入组织、申请立项、反馈意见。
 
