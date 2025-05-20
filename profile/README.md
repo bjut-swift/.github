@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/BJUT-Helper/master/images/title.png" alt = "front" width="500" height="500">
+    <img src="https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/BJUT-Helper/master/images/title.png" alt = "front" width="350" height="350">
 </div>
 
 > Sharing Wisdom, Innovation, & Futuristic Technologies (S.W.I.F.T.)
