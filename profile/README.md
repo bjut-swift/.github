@@ -10,7 +10,7 @@
 
 - 欢迎尝试、反馈[零基础编程入门](https://github.com/bjut-swift/CodeJourney)
 
-- 欢迎使用校内社区：[校园喵](https://xiaoyuancat.com/)
+- 欢迎使用已经变味的校内社区：[校园喵](https://xiaoyuancat.com/)
 
 - 美观的学校风PPT模板，欢迎使用：[模板仓库](https://github.com/bjut-swift/BJUT-PPT-template)
 
@@ -21,5 +21,5 @@
 
 我们的联系方式：
 
-- 在[工大喵](https://xiaoyuancat.com/)上添加官方的微信。
+- [邮件]( bjutswift.cn@gmail.com)
 - 发起[Issue](https://github.com/bjut-swift/.github/issues)
