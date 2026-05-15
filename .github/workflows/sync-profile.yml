@@ -1,0 +1,90 @@
+name: Sync organization profile
+
+on:
+  repository_dispatch:
+    types: [sync-profile]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch content.json
+        run: |
+          curl -sf https://www.bjutswift.cn/content.json -o content.json
+          if [ ! -s content.json ]; then
+            echo "::error::Failed to fetch content.json"
+            exit 1
+          fi
+
+      - name: Generate README
+        run: |
+          node -e "
+          const data = require('./content.json');
+
+          const blogList = data.blog
+            .slice(0, 6)
+            .map(p => '- [' + p.title + '](' + p.url + ') — ' + p.description)
+            .join('\n');
+
+          const projectList = data.projects
+            .map(p => '- [' + p.title + '](' + p.url + ')' + (p.github ? ' ([GitHub](' + p.github + '))' : '') + ' — ' + p.description)
+            .join('\n');
+
+          const libraryList = data.library
+            .map(p => '- [' + p.title + '](' + p.url + ') — ' + p.description)
+            .join('\n');
+
+          const readme = [
+            '<div align=\"center\">',
+            '  <img src=\"https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/BJUT-Helper/master/images/title.png\" alt=\"BJUT SWIFT\" width=\"350\" height=\"350\">',
+            '  <p><strong><a href=\"https://www.bjutswift.cn\">www.bjutswift.cn</a></strong></p>',
+            '</div>',
+            '',
+            '> Sharing Wisdom, Innovation, & Futuristic Technologies (S.W.I.F.T.)',
+            '',
+            '工大学子共建的技术共享平台，分享课程资源、项目经验与技术教程。',
+            '',
+            '## [飞跃手册](https://www.bjutswift.cn/feiyue)',
+            '',
+            '保研和留学申请的一手数据，来自学长学姐的真实记录。按专业、项目、申请方向筛选，也可以直接搜索。',
+            '',
+            '想贡献自己的申请记录？[在线填写](https://www.bjutswift.cn/feiyue/contribute)即可，支持匿名。',
+            '',
+            '## [专栏](https://www.bjutswift.cn/blog)',
+            '',
+            blogList,
+            '',
+            '## [项目展示](https://www.bjutswift.cn/projects)',
+            '',
+            projectList,
+            '',
+            '## [技术速查](https://www.bjutswift.cn/shorts)',
+            '',
+            libraryList,
+            '',
+            '## 联系我们',
+            '',
+            '- [官网](https://www.bjutswift.cn)',
+            '- [邮件](mailto:bjutswift.cn@gmail.com)',
+            '- [Issue](https://github.com/bjut-swift/.github/issues)',
+            '',
+            '---',
+            '',
+            '<sub>自动同步自 [swifts-nest](https://github.com/bjut-swift/swifts-nest) · 更新于 ' + data.updatedAt.split('T')[0] + '</sub>',
+            '',
+          ].join('\n');
+
+          require('fs').writeFileSync('profile/README.md', readme);
+          "
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add profile/README.md
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "sync: update profile from swifts-nest"
+          git push
