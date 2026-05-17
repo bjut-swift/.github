@@ -26,7 +26,7 @@
 - [BJUT-LaTeX-Template](https://www.bjutswift.cn/projects/bjut-latex) — 北京工业大学硕士学位论文 LaTeX 模版
 - [BJUT-Helper](https://www.bjutswift.cn/projects/bjut-helper) — 北京工业大学课程资源共享计划
 - [BJUT-CS](https://www.bjutswift.cn/projects/bjut-cs) — 北京工业大学 CS 相关知识库与经验分享
-- [BJUT-Chaoxing](https://www.bjutswift.cn/projects/bjut-chaoxing) — 北京工业大学学习通增强插件
+- [BJUT-Chaoxing](https://www.bjutswift.cn/projects/bjut-chaoxing) — 学习通任务一览插件，聚合查看作业与考试
 
 ## [技术速查](https://www.bjutswift.cn/shorts)
 
@@ -42,4 +42,4 @@
 
 ---
 
-<sub>自动同步自 [swifts-nest](https://github.com/bjut-swift/swifts-nest) · 更新于 2026-05-16</sub>
+<sub>自动同步自 [swifts-nest](https://github.com/bjut-swift/swifts-nest) · 更新于 2026-05-17</sub>
